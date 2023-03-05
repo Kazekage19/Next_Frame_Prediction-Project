@@ -1,0 +1,26 @@
+1.We activate the VSCode through Anaconda prompt.What difference does that make?
+Ans.If you open VSCode directly, it will use the Python environment that is set as the default system environment. This may or may not be the same Python environment that is associated with your Anaconda distribution, depending on how you have your system configured.
+On the other hand, if you open VSCode through the Anaconda prompt, it will use the Python environment associated with your active Anaconda environment. This means that any packages or dependencies installed in that environment will be available to you when you use VSCode.
+
+2.Creating a Virtual Environment.Why do we need one?
+Ans.Virtual environments are useful because they provide a self-contained, isolated environment for Python projects. When you create a virtual environment, you are essentially creating a separate installation of Python and any required packages. This means that you can have different versions of Python and packages installed on the same machine, and you can switch between them easily.
+Avoid conflicts between two projects that might require differnet versions of same thing.Another advantage is that it makes the project easily reproducible on another machine helping in deployments.
+
+code: 
+conda create -p venv python==3.11
+conda active venv(or its path)
+
+3.What is this setup.py script?
+Ans. The setup.py script is a common script used in Python projects to define the project's metadata, dependencies, and build process.
+ It's typically used in conjunction with the setuptools package, which provides a way to package and distribute Python code.
+ When you run python setup.py install or pip install . in a project's root directory, setuptools reads the setup.py script and uses the information provided to install the package and its dependencies on your system.
+ Add __init__.py file to any folder to make it a Python package.The packages=find_packages() function in setup.py searches the directory for python packages to install. 
+
+4.What is the "-e ." in the setup.py script?
+Ans.This "-e ." tells pip to install the local package in the current directory.
+So when we run pip install -r requirements.txt it will automatically trigger setup.py.
+
+5.Run pip install -r requirements.txt.
+
+
+
