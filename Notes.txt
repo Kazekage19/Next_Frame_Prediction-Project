@@ -21,6 +21,17 @@ Ans.This "-e ." tells pip to install the local package in the current directory.
 So when we run pip install -r requirements.txt it will automatically trigger setup.py.
 
 5.Run pip install -r requirements.txt.
+6.Sys module of Python:Used to get variables from the interpreter itself.
+In our exception.py file it is being used to get the value of error detail generated in the system.
 
+7.Our project structure contains many files such as components containing different aprts and processes,pipelines,log files for all happenings,custom exception displaying script and so on.
 
-
+8.Python's 'logging' module sets up a logging system.
+The level argument sets the logging level, which determines which log messages will be saved. 
+In this case, it is set to logging.INFO, which means that all log messages with a severity level of INFO or higher (e.g., WARNING, ERROR, CRITICAL) will be saved.
+CRITICAL: 50
+ERROR: 40
+WARNING: 30
+INFO: 20
+DEBUG: 10
+NOTSET: 0
